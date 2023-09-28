@@ -38,12 +38,18 @@ for (let i = 1; i <= 25; i++) {
   window[`color${i}`] = function () {
     if (i === r) {
       document.getElementById(`camp-${r}`).style.backgroundImage = "url(https://stake.com/_app/immutable/assets/mine.b710630c.svg)";
+      document.getElementById(`camp-${r}`).style.backgroundSize = "cover";
+      document.getElementById(`camp-${r}`).style.backgroundPosition = "center";
+      document.getElementById('explosion').play();
       setTimeout(lose, 100);
     }
     if (i != r) {
       document.getElementById(`camp-${i}`).style.backgroundImage = "url(https://stake.com/_app/immutable/assets/gem-none.8156426e.svg)";
+      document.getElementById(`camp-${i}`).style.backgroundSize = "cover";
+      document.getElementById(`camp-${i}`).style.backgroundPosition = "center";
       pontos = pontos + 1;
       document.getElementById('pt').innerText = `Pontos ${pontos}`
+      document.getElementById('success').play();
     }
   };
 }
