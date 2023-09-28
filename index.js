@@ -24,28 +24,6 @@ for (let i = 21; i <= 25; i++) {
   document.querySelector("#l5").innerHTML += `<div id="camp-${i}" onclick="color${i}()"></div>`
 }
 
-let jogadaC;
-let bombaC;
-let laranjaC;
-
-function jogada() {
-  jogadaC = true;
-  bombaC = false;
-  laranjaC = false;
-}
-
-function bomba() {
-  jogadaC = false;
-  bombaC = true;
-  laranjaC = false;
-}
-
-function laranja() {
-  jogadaC = false;
-  bombaC = false;
-  laranjaC = true;
-}
-
 function getRandomInt(min, max) {
   min = Math.ceil(min);
   max = Math.floor(max);
